@@ -133,7 +133,7 @@
         const mins = now.getHours() * 60 + now.getMinutes();
         
         const session1Start = 6 * 60 + 30; // 06:30 -> 390 menit
-        const session1End   = 7 * 60 + 30; // 07:30 -> 450 menit
+        const session1End   = 7 * 60 + 00; // 07:00 -> 450 menit
         
         const session2Start = 12 * 60 + 30; // 12:30 -> 750 menit
         const session2End   = 13 * 60 + 0;  // 13:00 -> 780 menit
@@ -151,7 +151,7 @@
     async function checkSession() {
         if (!isExamTime()) {
             localStorage.removeItem('cbt_session');
-            showNotif('notif-login', 'Ujian hanya dapat diakses pada jam 06:30 - 07:30 dan 12:30 - 13:00 WIB!', 'error');
+            showNotif('notif-login', 'Ujian hanya dapat diakses pada jam 06:30 - 07:00 dan 12:30 - 13:00 WIB!', 'error');
             return;
         }
 
